@@ -88,55 +88,101 @@ setup(
         "matplotlib",
         # gym and flake8 not compatible with importlib-metadata>5.0
         "importlib-metadata~=4.13",
+        
+        #"tests"
+        # Run tests and coverage
+        "pytest",
+        "pytest-cov",
+        "pytest-env",
+        "pytest-xdist",
+        # Type check
+        "pytype",
+        "mypy",
+        # Lint code
+        "flake8>=3.8",
+        # Find likely bugs
+        "flake8-bugbear",
+        # Sort imports
+        "isort>=5.0",
+        # Reformat
+        "black",
+        # For toy text Gym envs
+        "scipy>=1.4.1",
+        
+        #"docs"
+        "sphinx",
+        "sphinx-autobuild",
+        "sphinx-rtd-theme",
+        # For spelling
+        "sphinxcontrib.spelling",
+        # Type hints support
+        "sphinx-autodoc-typehints==1.21.1",  # TODO: remove version constraint, see #1290
+        # Copy button for code snippets
+        "sphinx_copybutton",
+        
+        #"extra"
+        # For render
+        "opencv-python",
+        # For atari games,
+        "ale-py==0.7.4",
+        "autorom~=0.5.5",
+        "pillow",
+        # Tensorboard support
+        "tensorboard>=2.9.1",
+        # Checking memory taken by replay buffer
+        "psutil",
+        # For progress bar callback
+        "tqdm",
+        "rich",
     ],
-    extras_require={
-        "tests": [
-            # Run tests and coverage
-            "pytest",
-            "pytest-cov",
-            "pytest-env",
-            "pytest-xdist",
-            # Type check
-            "pytype",
-            "mypy",
-            # Lint code
-            "flake8>=3.8",
-            # Find likely bugs
-            "flake8-bugbear",
-            # Sort imports
-            "isort>=5.0",
-            # Reformat
-            "black",
-            # For toy text Gym envs
-            "scipy>=1.4.1",
-        ],
-        "docs": [
-            "sphinx",
-            "sphinx-autobuild",
-            "sphinx-rtd-theme",
-            # For spelling
-            "sphinxcontrib.spelling",
-            # Type hints support
-            "sphinx-autodoc-typehints==1.21.1",  # TODO: remove version constraint, see #1290
-            # Copy button for code snippets
-            "sphinx_copybutton",
-        ],
-        "extra": [
-            # For render
-            "opencv-python",
-            # For atari games,
-            "ale-py==0.7.4",
-            "autorom[accept-rom-license]~=0.4.2",
-            "pillow",
-            # Tensorboard support
-            "tensorboard>=2.9.1",
-            # Checking memory taken by replay buffer
-            "psutil",
-            # For progress bar callback
-            "tqdm",
-            "rich",
-        ],
-    },
+#     extras_require={
+#         "tests": [
+#             # Run tests and coverage
+#             "pytest",
+#             "pytest-cov",
+#             "pytest-env",
+#             "pytest-xdist",
+#             # Type check
+#             "pytype",
+#             "mypy",
+#             # Lint code
+#             "flake8>=3.8",
+#             # Find likely bugs
+#             "flake8-bugbear",
+#             # Sort imports
+#             "isort>=5.0",
+#             # Reformat
+#             "black",
+#             # For toy text Gym envs
+#             "scipy>=1.4.1",
+#         ],
+#         "docs": [
+#             "sphinx",
+#             "sphinx-autobuild",
+#             "sphinx-rtd-theme",
+#             # For spelling
+#             "sphinxcontrib.spelling",
+#             # Type hints support
+#             "sphinx-autodoc-typehints==1.21.1",  # TODO: remove version constraint, see #1290
+#             # Copy button for code snippets
+#             "sphinx_copybutton",
+#         ],
+#         "extra": [
+#             # For render
+#             "opencv-python",
+#             # For atari games,
+#             "ale-py==0.7.4",
+#             "autorom~=0.5.5",
+#             "pillow",
+#             # Tensorboard support
+#             "tensorboard>=2.9.1",
+#             # Checking memory taken by replay buffer
+#             "psutil",
+#             # For progress bar callback
+#             "tqdm",
+#             "rich",
+#         ],
+#     },
     description="Pytorch version of Stable Baselines, implementations of reinforcement learning algorithms.",
     author="Antonin Raffin",
     url="https://github.com/DLR-RM/stable-baselines3",
